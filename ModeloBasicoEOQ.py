@@ -8,20 +8,20 @@ L=int(input("Tiempo de entrega(días): "))
 
 #Round = Redondeo en decimales
 #Cantidad a ordenar(uds)
-Q=math.sqrt((2*D*Co)/Ch)
-Q = round(Q)
+Q=round(math.sqrt((2*D*Co)/Ch))
+
 #Costo Anual de Inventario
 CAI=(D/Q)*Co + (Q/2)*Ch
-CAI = round(CAI)
+
 #Reorden
-R=(D/365)*L
-R = round(R)
+R=round((D/365)*L)
+
 #Demanda diaria
-Dd=(D/365)
-Dd = round(Dd)
+Dd=round((D/365))
+
 #Periodo de abastecimiento
-Tiempo=(Q/Dd)
-Tiempo = round(Tiempo)
+Tiempo=round((Q/Dd))
+
 
 print(f"Cantidad a ordenar: {Q} uds")
 print(f"Costo Anual de Inventario: ${CAI} ")

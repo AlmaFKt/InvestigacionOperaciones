@@ -7,25 +7,19 @@ Co=int(input("Costo por ordenar($): "))
 Ch=int(input("Costo de conservación($/ud/año): ")) 
 L=int(input("Tiempo de entrega(días): "))
 
-Q=math.sqrt(((2*D)*Co)/(Ch*(1-D/S)))
-Q = round(Q)
+Q=round(math.sqrt(((2*D)*Co)/(Ch*(1-D/S))))
 
 T=Q/S
 
-Produccion=T*365
-Produccion = round(Produccion)
+Produccion=round(T*365)
 
-Imax=(S-D)*T
-Imax = round(Imax)
+Imax=round((S-D)*T)
 
-NoProduccion=Imax/(D/365)
-NoProduccion = round(NoProduccion)
+NoProduccion=round(Imax/(D/365))
 
-CAI=((D/Q)*Co)+(Q/2*(1-D/S)*Ch)
-CAI = round(CAI)
+CAI=round(((D/Q)*Co)+(Q/2*(1-D/S)*Ch))
 
-R=(D/365)*L
-R = round(R)
+R=round((D/365)*L)
 
 print(f"Cantidad optima a ordenar (Q): {Q} uds")
 print(f"Periodo para ordenar (t): {T} años")
